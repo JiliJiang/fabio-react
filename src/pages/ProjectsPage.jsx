@@ -1,10 +1,9 @@
 // This is a static page mocking an "About Us" section for our fake user data
 
-const projectImage1 = import('../imgs/background.jpg')
-const projectImage2 = import('../imgs/background1.jpg')
-const projectImage3 = import('../imgs/background2.jpg')
 
-
+import projectImage1 from '../imgs/background.jpg'
+import projectImage2 from '../imgs/background1.jpg'
+import projectImage3 from '../imgs/background2.jpg'
 
 export default function ProjectsPage() {
 
@@ -62,7 +61,7 @@ const titleStyle={
 {projects.map(p =>{ return <li key={p.id}>
   {p.title}<br/>
   {p.decription}<br/>
-<img src={p.image} style={{height:"50px", width:"50px", backgroundColor:"purple"}}/><br/>
+<img src={p.image} style={{height:"200px", width:"300px", backgroundColor:"purple"}}/><br/>
   <a href={p.github} target="_blank" rel="noopener noreferrer">Github</a><br/>
   <a href={p.deployed} target="_blank" rel="noopener noreferrer">Deployed</a><br/>
 
